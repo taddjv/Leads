@@ -1,0 +1,10 @@
+.home {
+  height: calc(100vh - 144px);
+  padding: 0 8em;
+}
+.home-left {
+  height: stretch;
+}
+.hl-image {
+  height: stretch;
+}
