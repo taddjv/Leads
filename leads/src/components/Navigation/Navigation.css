@@ -1,0 +1,48 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px;
+}
+.navigation-left {
+  display: flex;
+  align-items: center;
+}
+
+.nl-logo {
+  height: 72px;
+  width: 72px;
+}
+.nl-name {
+  font-family: logo;
+  text-transform: uppercase;
+  font-size: 36px;
+  color: #5a3eb5;
+}
+.navigation-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.nr-Link {
+  font-family: light;
+  text-transform: capitalize;
+  font-size: 24px;
+  word-spacing: -2px;
+  color: grey;
+  padding: 4px 12px;
+  border-radius: 500px;
+}
+.nr-Link:hover {
+  background: #e5e8fd;
+}
+.nr-button {
+  font-family: light;
+  text-transform: capitalize;
+  font-size: 24px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #8c8fff;
+  color: #ffffff;
+}
