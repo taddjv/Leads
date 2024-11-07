@@ -1,0 +1,9 @@
+@font-face {
+  font-family: bold;
+  src: url("./assets/font/EncodeSansExpanded-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}

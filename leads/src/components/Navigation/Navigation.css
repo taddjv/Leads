@@ -1,0 +1,19 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 40px 60px;
+  border: 1px solid black;
+  /* height: 120px; */
+}
+.navigation-left {
+  display: flex;
+  align-items: center;
+}
+
+.nl-logo {
+  height: 72px;
+  width: 72px;
+}
+.nl-name {
+  font-family: bold;
+}
