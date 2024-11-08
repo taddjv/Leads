@@ -1,8 +1,4 @@
 @font-face {
-  font-family: bold;
-  src: url("./assets/font/EncodeSansExpanded-Bold.ttf");
-}
-@font-face {
   font-family: logo;
   src: url("./assets/Pacifico-Regular.ttf");
 }
@@ -10,11 +6,28 @@
   font-family: light;
   src: url("./assets/Roboto/Roboto-Light.ttf");
 }
+@font-face {
+  font-family: regular;
+  src: url("./assets/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: bold;
+  src: url("./assets/Roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: title;
+  src: url("./assets/Larken\ Serif\ Trial/LarkenDEMO-Black.otf");
+}
 * {
   margin: 0;
   box-sizing: border-box;
+  color:#343741
 }
 a,
 u {
   text-decoration: none;
+}
+body {
+  width: 100vw;
+  overflow: hidden;
 }
