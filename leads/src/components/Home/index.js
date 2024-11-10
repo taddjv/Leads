@@ -7,7 +7,7 @@ import icon from "../../assets/icon.png";
 
 const Home = () => {
   useEffect(() => {
-    const str = "NSCODE YT CHANNEL SUBSCRIBE NOW";
+    const str = "Couvertures Sans Examen Medical";
     const text = document.getElementById("text");
 
     window.onload = function () {
@@ -21,7 +21,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home">
+    <section className="home">
       <img className="blob1" src={blob1} alt="blob1" />
       <div className="home-left">
         <img className="hl-image" src={family} alt="family" />
@@ -35,7 +35,7 @@ const Home = () => {
         </div>
         <div
           onMouseEnter={() => {
-            document.querySelector(".hrb-dopdown").style.display = "flex";
+            document.querySelector(".hrb-dopdown").style.display = "grid";
           }}
           onMouseLeave={() => {
             document.querySelector(".hrb-dopdown").style.display = "none";
@@ -50,7 +50,7 @@ const Home = () => {
         <img className="icon" src={icon} alt="icon" />
         <p id="text"></p>
       </div>
-    </div>
+    </section>
   );
 };
 

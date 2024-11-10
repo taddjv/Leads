@@ -1,4 +1,9 @@
 import React from "react";
+import p1 from "../../assets/p1.jpg";
+import p2 from "../../assets/p2.jpg";
+import p3 from "../../assets/p3.jpg";
+import p4 from "../../assets/p4.jpg";
+import p5 from "../../assets/p5.jpg";
 
 const HomeDropDown = () => {
   return (
@@ -6,19 +11,19 @@ const HomeDropDown = () => {
       <div className="hrbd-left">
         <div className="hrbdl-title">Assurance Vie</div>
         <div className="hrbdl-container">
-          <div className="hrbdl-icon"></div>
+          <img src={p1} alt="person" className="hrbdl-icon" />
           <a href="/" className="hrbdl-link">
             Assurance Vie Permanente
           </a>
         </div>
         <div className="hrbdl-container">
-          <div className="hrbdl-icon"></div>
+          <img src={p2} alt="person" className="hrbdl-icon" />
           <a href="/" className="hrbdl-link">
             Assurance Vie Temporaire
           </a>
         </div>
         <div className="hrbdl-container">
-          <div className="hrbdl-icon"></div>
+          <img src={p3} alt="person" className="hrbdl-icon" />
           <a href="/" className="hrbdl-link">
             Assurance Hypothécaire
           </a>
@@ -28,13 +33,13 @@ const HomeDropDown = () => {
         {" "}
         <div className="hrbdl-title">Assurance Prestation du Vivant</div>
         <div className="hrbdl-container">
-          <div className="hrbdl-icon"></div>
+          <img src={p4} alt="person" className="hrbdl-icon" />
           <a href="/" className="hrbdl-link">
             Assurance Maladie-Grave
           </a>
         </div>
         <div className="hrbdl-container">
-          <div className="hrbdl-icon"></div>
+          <img src={p5} alt="person" className="hrbdl-icon" />
           <a href="/" className="hrbdl-link">
             Assurance Salaire
           </a>

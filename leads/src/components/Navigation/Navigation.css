@@ -27,7 +27,7 @@
 .nr-Link {
   font-family: light;
   text-transform: capitalize;
-  font-size: 24px;
+  font-size: 20px;
   word-spacing: -2px;
   color: grey;
   padding: 4px 12px;
@@ -35,7 +35,7 @@
 }
 .nr-Link:hover {
   background: white;
-  color:#5a3eb5
+  color: #5a3eb5;
 }
 .nr-button {
   font-family: light;
