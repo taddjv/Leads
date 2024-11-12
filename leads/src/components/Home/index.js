@@ -27,7 +27,7 @@ const Home = () => {
         <img className="hl-image" src={family} alt="family" />
       </div>
       <div className="home-right">
-        <div className="hr-title">Assurez Votre Avenir.</div>
+        <div className="hr-title"><div>Assurez Votre</div> Avenir.</div>
         <div className="hr-text">
           "AssurÉlite est là pour vous aider à trouver et à acheter efficacement
           la bonne police d'assurance. Rassurez votre famille pour qu'elle

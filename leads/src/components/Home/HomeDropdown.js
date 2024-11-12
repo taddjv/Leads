@@ -18,7 +18,7 @@ const HomeDropDown = () => {
         </div>
         <div className="hrbdl-container">
           <img src={p2} alt="person" className="hrbdl-icon" />
-          <a href="/" className="hrbdl-link">
+          <a href="/assurance-vie-temporaire" className="hrbdl-link">
             Assurance Vie Temporaire
           </a>
         </div>

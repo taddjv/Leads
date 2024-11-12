@@ -3,7 +3,7 @@
   height: calc(100vh - 144px);
   padding: 2.5% 0;
   display: flex;
-  max-width: 1280px;
+  width: 1440px;
   margin: auto;
 }
 .blob1 {
@@ -12,7 +12,7 @@
   height: 75vw;
   width: 75vw;
   left: 85%;
-  top: -55%;
+  top: -60%;
   transform: translate(-50%, -50%);
 }
 .home-left {
@@ -28,6 +28,14 @@
   gap: 24px;
 }
 .hr-title {
+  font-family: title;
+  text-transform: capitalize;
+  font-size: 88px;
+  line-height: 80px;
+  color: #5a3eb5;
+}
+.hr-title > div {
+  white-space: nowrap;
   font-family: title;
   text-transform: capitalize;
   font-size: 88px;

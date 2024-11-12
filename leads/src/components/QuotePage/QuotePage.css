@@ -1,0 +1,36 @@
+.quotepage {
+    position: relative;
+    height: calc(100vh - 144px);
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: auto;
+    overflow: scroll;
+}
+.blob1 {
+    position: absolute;
+    z-index: -100;
+    height: 75vw;
+    width: 75vw;
+    left: 85%;
+    top: -60%;
+    transform: translate(-50%, -50%);
+  }
+.quotepage-top {
+    width: 1440px;
+    margin: auto;
+    height: calc(100vh - 144px - 200px - 80px);
+    display: flex;
+}
+.qpt-right {
+    height: 100%;
+}
+.qptr-image {
+    height: 100%;
+}
+.quotepage-bottom {
+    background: #e5e8fd;
+    height: 200px;
+    width: 100vw;
+}
