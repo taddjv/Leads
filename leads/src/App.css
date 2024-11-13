@@ -18,13 +18,17 @@
   font-family: title;
   src: url("./assets/Larken\ Serif\ Trial/LarkenDEMO-Black.otf");
 }
+@font-face {
+  font-family: title-regular;
+  src: url("./assets/Larken\ Serif\ Trial/LarkenDEMO-Medium.otf");
+}
 * {
   margin: 0;
   box-sizing: border-box;
   color: #343741;
 
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 *::-webkit-scrollbar {
   display: none;

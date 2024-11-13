@@ -58,7 +58,7 @@
   color: #ffffff;
   width: fit-content;
   align-self: flex-start;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .hr-button-container {
   position: relative;

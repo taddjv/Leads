@@ -12,7 +12,7 @@ const HomeDropDown = () => {
         <div className="hrbdl-title">Assurance Vie</div>
         <div className="hrbdl-container">
           <img src={p1} alt="person" className="hrbdl-icon" />
-          <a href="/" className="hrbdl-link">
+          <a href="/assurance-vie-permanente" className="hrbdl-link">
             Assurance Vie Permanente
           </a>
         </div>
@@ -24,7 +24,7 @@ const HomeDropDown = () => {
         </div>
         <div className="hrbdl-container">
           <img src={p3} alt="person" className="hrbdl-icon" />
-          <a href="/" className="hrbdl-link">
+          <a href="/assurance-hypothecaire" className="hrbdl-link">
             Assurance Hypothécaire
           </a>
         </div>
@@ -34,13 +34,13 @@ const HomeDropDown = () => {
         <div className="hrbdl-title">Assurance Prestation du Vivant</div>
         <div className="hrbdl-container">
           <img src={p4} alt="person" className="hrbdl-icon" />
-          <a href="/" className="hrbdl-link">
+          <a href="/assurance-maladie-grave" className="hrbdl-link">
             Assurance Maladie-Grave
           </a>
         </div>
         <div className="hrbdl-container">
           <img src={p5} alt="person" className="hrbdl-icon" />
-          <a href="/" className="hrbdl-link">
+          <a href="/assurance-salaire" className="hrbdl-link">
             Assurance Salaire
           </a>
         </div>
