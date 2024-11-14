@@ -2,6 +2,7 @@ import "./App.css";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
 import QuotePage from "./components/QuotePage";
+import Quote from "./components/Quote";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import avt from "./assets/AVT.svg";
 // import avp from "./assets/AVT.svg";
@@ -90,14 +91,15 @@ export default function App() {
             element={
               <>
                 <Navigation />
-                <QuotePage
+                {/* <QuotePage
                   name={
                     <>
                       <div>Assurance</div>Salaire
                     </>
                   }
                   picture={avt}
-                />{" "}
+                />{" "} */}
+                <Quote />
               </>
             }
           ></Route>
