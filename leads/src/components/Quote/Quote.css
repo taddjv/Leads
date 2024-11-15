@@ -1,48 +1,7 @@
-/* input {
-  font-family: light;
-  letter-spacing: 0px;
-  font-size: 16px;
-  border: none;
-  border-bottom: 1px solid black;
-  height: 40px;
-  padding: 3px;
-  padding-left: 10px;
-}
-input:hover {
-  box-shadow: 0 0.5px black;
-}
-input:focus {
-  outline: none;
-  box-shadow: 0 0.5px black;
-}
-.PhoneInputCountryIconImg,
-.PhoneInputCountrySelect {
-  display: none;
-}
-textarea {
-  font-family: light;
-  letter-spacing: 0px;
-  font-size: 16px;
-  border: 1px solid black;
-  height: 120px;
-  width: 420px;
-  padding: 3px;
-  padding-left: 10px;
-}
-textarea:hover {
-  -webkit-box-shadow: 0 0.5px black;
-  -moz-box-shadow: 0 0.5px black;
-  box-shadow: 0 0.5px black;
-}
-textarea:focus {
-  outline: none;
-  box-shadow: 0 0.5px black;
-} */
-
 label {
   position: absolute;
-  left: 14px;
-  top: 13px;
+  left: 4px;
+  top: 3px;
   text-align: start;
   pointer-events: none;
   color: #b2bec3;
@@ -52,7 +11,7 @@ input {
   width: stretch;
   height: stretch;
   font-size: 24px;
-  padding: 0 12px;
+  padding: 0 4px;
   border: none;
   /* border: 1px solid red; */
   border-bottom: 4px solid rgba(0, 0, 0, 0.151);
@@ -62,7 +21,7 @@ input:focus {
 }
 input:focus ~ label,
 input:not(:placeholder-shown) ~ label {
-  transform: translate(-14px, -40px);
+  transform: translate(-2px, -24px);
   font-size: 16px;
 }
 .PhoneInputCountryIconImg,
@@ -81,6 +40,7 @@ input:not(:placeholder-shown) ~ label {
   background: white;
   width: 800px;
   padding: 64px;
+  border-radius: 12.5px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   height: fit-content;
   display: flex;
@@ -90,6 +50,16 @@ input:not(:placeholder-shown) ~ label {
 .qf-input {
   position: relative;
   font-family: regular;
-  height: 56px;
+  height: 40px;
   font-size: 24px;
+}
+.qf-title {
+  font-size: 24px;
+  font-family: bold;
+  text-align: center;
+}
+.qf-subtitle {
+  font-size: 20px;
+  font-family: regular;
+  text-align: center;
 }

@@ -17,6 +17,10 @@ const Quote = () => {
   return (
     <div className="quote">
       <form className="quote-form">
+        <div className="qf-title"> Vos Coordonnées</div>
+        <div className="qf-subtitle">
+          Pour trouver l'assureur qui vous convient le mieux.
+        </div>
         <div className="qf-input">
           <input
             type="text"
