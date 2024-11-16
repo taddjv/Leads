@@ -22,6 +22,14 @@
   font-family: title-regular;
   src: url("./assets/Larken\ Serif\ Trial/LarkenDEMO-Medium.otf");
 }
+@font-face {
+  font-family: catamaran;
+  src: url("./assets/catamaran/Catamaran-Regular.ttf");
+}
+@font-face {
+  font-family: catamaran-bold;
+  src: url("./assets/catamaran/Catamaran-Bold.ttf");
+}
 * {
   margin: 0;
   box-sizing: border-box;
@@ -40,4 +48,8 @@ u {
 body {
   width: 100vw;
   overflow: hidden;
+  background: #feefdc;
+}
+mark {
+  background-color: rgba(254, 239, 220, 0.5);
 }

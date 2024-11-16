@@ -2,7 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 36px;
+  padding: 20px 48px;
+  max-width: 1696px;
+  margin: auto;
 }
 .navigation-left {
   display: flex;
@@ -29,7 +31,6 @@
   text-transform: capitalize;
   font-size: 20px;
   word-spacing: -2px;
-  color: grey;
   padding: 4px 12px;
   border-radius: 500px;
 }
@@ -44,7 +45,47 @@
   padding: 12px;
   border-radius: 12px;
   border: none;
-  background: #8c8fff;
+  background: #6986ce;
   color: #ffffff;
   width: fit-content;
+}
+
+.nr-burger {
+  height: 48px;
+  width: 48px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 8px;
+}
+.nr-burger > div {
+  display: none;
+  height: 3px;
+  width: 100%;
+  background: #6986ce;
+}
+
+@media (max-width: 1000px) {
+  .navigation {
+    padding: 1.6em;
+  }
+  .nr-Link {
+    display: none;
+  }
+  .nr-button {
+    display: none;
+  }
+  .nr-burger {
+    display: flex;
+  }
+  .nr-burger > div {
+    display: inline-block;
+  }
+  .nl-logo {
+    height: 48px;
+    width: 48px;
+  }
+  .nl-name {
+    font-size: 24px;
+  }
 }

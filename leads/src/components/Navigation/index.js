@@ -23,6 +23,11 @@ function Navigation() {
         <a href="/" className="nr-Link">
           nous joindre
         </a>
+        <div className="nr-burger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
         <button className="nr-button">EN</button>
       </div>
     </div>
