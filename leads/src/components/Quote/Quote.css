@@ -1,65 +1,109 @@
-label {
-  position: absolute;
-  left: 4px;
-  top: 3px;
-  text-align: start;
-  pointer-events: none;
-  color: #b2bec3;
-}
-input {
-  position: absolute;
-  width: stretch;
-  height: stretch;
-  font-size: 24px;
-  padding: 0 4px;
-  border: none;
-  /* border: 1px solid red; */
-  border-bottom: 4px solid rgba(0, 0, 0, 0.151);
-}
-input:focus {
-  outline: none;
-}
-input:focus ~ label,
-input:not(:placeholder-shown) ~ label {
-  transform: translate(-2px, -24px);
-  font-size: 16px;
-}
 .PhoneInputCountryIconImg,
 .PhoneInputCountrySelect {
   display: none;
 }
 
 .quote {
-  height: calc(100vh - 144px);
+  height: calc(100vh - 112px);
   display: flex;
   justify-content: center;
   padding-top: 80px;
-  background-color: #f2f2f2;
+  background: white;
 }
 .quote-form {
-  background: white;
-  width: 800px;
-  padding: 64px;
-  border-radius: 12.5px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  width: 460px;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(47, 43, 61, 0.2);
   height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 20px;
 }
-.qf-input {
-  position: relative;
-  font-family: regular;
+.qf-input > input,
+.qfd-input,
+.PhoneInputInput {
   height: 40px;
-  font-size: 24px;
+  width: stretch;
+  font-size: 0.9375rem;
+  font-family: light;
+  color: rgba(47, 43, 61, 0.68);
+  border-radius: 6px;
+  border: 1px solid rgba(47, 43, 61, 0.2);
+  padding: 0 12px;
+  margin-top: 8px;
+}
+.qf-input > input:focus,
+.qfd-input:focus,
+.PhoneInputInput:focus {
+  border: 1px solid #0c0961;
+  outline: none;
+  box-shadow: 0px 2px 6px 0px rgba(12, 9, 97, 0.1);
+}
+.qf-input > label {
+  font-size: 0.9375rem;
+  font-family: light;
+  text-transform: uppercase;
 }
 .qf-title {
-  font-size: 24px;
+  font-size: 20px;
   font-family: bold;
   text-align: center;
 }
 .qf-subtitle {
   font-size: 20px;
-  font-family: regular;
   text-align: center;
+}
+
+.qf-radio-container-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.qf-radio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 6px;
+  border: 1px solid #0c0961;
+  height: 46px;
+  width: fit-content;
+}
+.qfr-radio {
+  display: none;
+}
+.qfr-label {
+  font-size: 0.9375rem;
+  font-family: light;
+  color: rgba(47, 43, 61, 0.68);
+  cursor: pointer;
+  margin: 0.125rem;
+  border-radius: 6px;
+  padding: 0 12px;
+  line-height: 40.185px;
+  width: 80px;
+  text-align: center;
+}
+.qfr-radio:checked + .qfr-label {
+  background: #0c0961;
+  color: white;
+}
+.qfr-title {
+  font-size: 0.9375rem;
+  font-family: light;
+  text-transform: uppercase;
+}
+.qfd-input {
+  height: 40px;
+  width: stretch;
+  font-size: 0.9375rem;
+  font-family: light;
+  color: rgba(47, 43, 61, 0.68);
+  border-radius: 6px;
+  border: 1px solid rgba(47, 43, 61, 0.2);
+  padding: 0 12px;
+}
+input::-webkit-datetime-edit-day-field:focus,
+input::-webkit-datetime-edit-month-field:focus,
+input::-webkit-datetime-edit-year-field:focus {
+  background-color: #0c0961;
+  outline: none;
 }

@@ -49,6 +49,7 @@ body {
   width: 100vw;
   overflow: hidden;
   background: #feefdc;
+  /* background: white; */
 }
 mark {
   background-color: rgba(254, 239, 220, 0.5);
