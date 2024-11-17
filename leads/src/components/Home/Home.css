@@ -59,7 +59,7 @@
 .spin {
   position: absolute;
   height: fit-content;
-  bottom: 20px;
+  bottom: 72px;
 }
 .icon {
   position: absolute;
@@ -91,6 +91,8 @@ span {
   color: #0c0961;
   font-size: 12px;
 }
+
+/*-------------------------------*/
 .hr-button-container {
   position: relative;
 }
@@ -139,6 +141,9 @@ span {
     height: fit-content;
     width: 66%;
   }
+  .spin {
+    display: none;
+  }
 }
 @media (max-width: 1000px) {
   .home {
@@ -161,5 +166,16 @@ span {
   }
   .home-text {
     width: 100%;
+  }
+  .spin {
+    display: flex;
+    align-items: center;
+    position: relative;
+    align-self: self-end;
+    bottom: 0;
+  }
+  .icon {
+    height: 100px;
+    width: 100px;
   }
 }

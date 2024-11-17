@@ -53,27 +53,6 @@ const Quote = () => {
             defaultCountry="CA"
           />
         </div>
-        {/* <label>
-          Courriel *
-          <input
-            type="email"
-            id="email"
-            required={true}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
-        <label>
-          Téléphone *
-          <PhoneInput
-            placeholder="Entrez le Numéro de Téléphone"
-            value={phone}
-            onChange={setPhone}
-            defaultCountry="CA"
-            id="phone"
-            required={true}
-          />
-        </label> */}
       </form>
     </div>
   );

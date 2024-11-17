@@ -10,8 +10,6 @@ import companies from "../../assets/companies";
 const QuotePage = ({ name, picture }) => {
   return (
     <section className="quotepage">
-      <img className="blob1" src={blob1} alt="blob1" />
-
       <div className="quotepage-top">
         <div className="qpt-left">
           <div className="qptl-title">{name}</div>

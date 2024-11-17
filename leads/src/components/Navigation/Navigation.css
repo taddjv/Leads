@@ -1,4 +1,5 @@
 .navigation {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,7 +20,7 @@
   font-family: logo;
   text-transform: uppercase;
   font-size: 36px;
-  color: #5a3eb5;
+  color: #0c0961;
 }
 .navigation-right {
   display: flex;
@@ -31,12 +32,12 @@
   text-transform: capitalize;
   font-size: 20px;
   word-spacing: -2px;
-  padding: 4px 12px;
+  padding: 8px 12px;
   border-radius: 500px;
 }
 .nr-Link:hover {
-  background: white;
-  color: #5a3eb5;
+  background: rgba(201, 214, 255, 0.5);
+  color: #0c0961;
 }
 .nr-button {
   font-family: light;
@@ -64,7 +65,57 @@
   width: 100%;
   background: #6986ce;
 }
+.nr-x {
+  height: 48px;
+  width: 48px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px 8px;
+}
+.nr-x > div {
+  display: none;
+  height: 3px;
+  width: 100%;
+  background: #6986ce;
+}
 
+.navigation-popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: calc(100vh - (48px + 3.2rem));
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #0c0961;
+  background: #feefdc;
+  padding-bottom: calc(clamp(4em, 6.666vw, 3em) * 1.25);
+  padding-top: calc(clamp(3em, 6.666vw, 3em) * 1.25);
+}
+.np-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.npt-ink {
+  font-family: title-regular;
+  font-size: min(calc((100vw - (0.8em * 2)) * 0.15), 10vw);
+  color: #0c0961;
+}
+.np-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.npb-logo {
+  height: 48px;
+  width: 48px;
+}
 @media (max-width: 1000px) {
   .navigation {
     padding: 1.6em;
@@ -81,11 +132,37 @@
   .nr-burger > div {
     display: inline-block;
   }
+  .nr-x {
+    display: flex;
+    position: relative;
+  }
+  .nr-x > div:not(:nth-child(2)) {
+    display: inline-block;
+  }
+  .nr-x > div:nth-child(1) {
+    width: 42.42px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .nr-x > div:nth-child(3) {
+    width: 42.42px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
   .nl-logo {
     height: 48px;
     width: 48px;
   }
   .nl-name {
     font-size: 24px;
+  }
+}
+@media (max-width: 496px) {
+  .npt-ink {
+    font-size: min(calc((100vw - (0.8em * 2)) * 0.15), 13vw);
   }
 }
