@@ -1,135 +1,123 @@
-import React, { useState, useRef, useEffect } from "react";
-import PhoneInput from "react-phone-number-input";
+import React, { useContext, useState, useEffect } from "react";
+import axios from "axios";
+import { validData } from "../../assets/helpers";
+import { Context } from "../../App";
+import Quote1 from "./Quote1";
+import Quote2 from "./Quote2";
 import "./Quote.css";
-import $ from "jquery";
-import formatCurrency from "../../assets/jQuery";
+import arrow from "../../assets/arrow.svg";
 
 const Quote = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const [step, setStep] = useState(1);
+  const name = useContext(Context)[0];
+  const setName = useContext(Context)[1];
+  const email = useContext(Context)[2];
+  const setEmail = useContext(Context)[3];
+  const number = useContext(Context)[4];
+  const setNumber = useContext(Context)[5];
+  const type = useContext(Context)[6];
+  const age = useContext(Context)[8];
+  const setAge = useContext(Context)[9];
+  const sex = useContext(Context)[10];
+  const setSex = useContext(Context)[11];
+  const smoke = useContext(Context)[12];
+  const setSmoke = useContext(Context)[13];
+  const money = useContext(Context)[14];
+  const setMoney = useContext(Context)[15];
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const serviceId = "service_4sn6l6j";
+    const templateId = "template_2fqpcut";
+    const publicKey = "vktr9vYp-nh4im-e9";
+
+    const templateParams = {
+      name,
+      email,
+      number,
+      type,
+      age,
+      sex,
+      smoke,
+      money,
+    };
+
+    const info = {
+      service_id: serviceId,
+      template_id: templateId,
+      user_id: publicKey,
+      template_params: templateParams,
+    };
+
+    try {
+      // const res = axios.post(
+      //   "https://api.emailjs.com/api/v1.0/email/send",
+      //   info
+      // );
+      setName("");
+      setEmail("");
+      setNumber("");
+      setAge("");
+      setSex("homme");
+      setSmoke(true);
+      setMoney("");
+    } catch (error) {
+      console.error(error);
+    }
+  };
   useEffect(() => {
-    // const label = document.createElement("LABEL");
-    // const content = document.createTextNode("Téléphone *");
-    // label.appendChild(content);
-    // document.querySelector(".PhoneInput").appendChild(label);
-    $("input[data-type='currency']").on({
-      keyup: function () {
-        formatCurrency($(this));
-      },
-      blur: function () {
-        formatCurrency($(this), "blur");
-      },
-    });
-  }, []);
+    validData(name, email, number, type, age, sex, smoke, money);
+  }, [useContext(Context)]);
 
   return (
     <div className="quote">
-      <form className="quote-form">
-        <div className="qf-title"> Vos Coordonnées</div>
-        {/* <div className="qf-radio-container-flex">
-          <div className="qf-radio-container">
-            <div className="qfr-title">Votre sexe</div>
-            <div className="qf-radio">
-              <input
-                className="qfr-radio"
-                type="radio"
-                value="homme"
-                name="sex"
-                id="sex1"
-                defaultChecked
-              />
-              <label className="qfr-label" for="sex1">
-                Homme
-              </label>
-              <input
-                className="qfr-radio"
-                type="radio"
-                value="femme"
-                name="sex"
-                id="sex2"
-              />
-              <label className="qfr-label" for="sex2">
-                Femme
-              </label>
-            </div>
+      <form className="quote-form" onSubmit={handleSubmit}>
+        <div className="qf-bar">
+          <div
+            onClick={() => {
+              setStep(1);
+            }}
+            className={step === 1 ? "qfb-button-active" : "qfb-button"}
+          >
+            Étape 1
           </div>
-          <div className="qf-radio-container">
-            <div className="qfr-title">Etes vous fumeur</div>
-            <div className="qf-radio">
-              <input
-                className="qfr-radio"
-                type="radio"
-                value="non"
-                name="fumeur"
-                id="fumeur2"
-                defaultChecked
-              />
-              <label className="qfr-label" for="fumeur2">
-                Non
-              </label>
-              <input
-                className="qfr-radio"
-                type="radio"
-                value="oui"
-                name="fumeur"
-                id="fumeur1"
-              />
-              <label className="qfr-label" for="fumeur1">
-                Oui
-              </label>
-            </div>
+          <div
+            onClick={() => {
+              setStep(2);
+            }}
+            className={step === 2 ? "qfb-button-active" : "qfb-button"}
+          >
+            Étape 2
           </div>
         </div>
-        <div className="qf-date">
-          <div className="qfr-title">votre date de naissance</div>
-          <input type="date" className="qfd-input" />
+        {step === 1 ? (
+          <div className="qf-title">Votre Description</div>
+        ) : (
+          <div className="qf-title"> Vos Coordonnées</div>
+        )}
+
+        {step === 1 ? <Quote1 /> : <Quote2 />}
+        <div className="qf-buttons">
+          <div
+            onClick={() => {
+              setStep(1);
+            }}
+            className={step === 2 ? "qf-button-active" : "qf-button"}
+          >
+            <img src={arrow} alt="arrow" />
+          </div>
+          <div
+            onClick={() => {
+              setStep(2);
+            }}
+            className={step === 1 ? "qf-button-active" : "qf-button"}
+          >
+            <img className="qf-button-flip" src={arrow} alt="arrow" />
+          </div>
         </div>
-        <div className="qf-money">
-          <div className="qfr-title">capital a couvrir</div>
-          <input
-            type="text"
-            className="qfd-input"
-            placeholder="$100 000"
-            pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
-            data-type="currency"
-          />
-        </div> */}
-        <div className="qf-input">
-          <label>Nom Complet</label>
-          <input
-            type="text"
-            required={true}
-            id="nom"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="ex: Jean Dupont"
-          />
-        </div>
-        <div className="qf-input">
-          <label>Courriel</label>
-          <input
-            type="email"
-            id="email"
-            required={true}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="ex: Jean@Dupont.com"
-          />
-        </div>
-        <div className="qf-input">
-          <label>Numero de telephone</label>
-          <PhoneInput
-            id="phone"
-            required={true}
-            value={phone}
-            onChange={setPhone}
-            placeholder="(555) 555-555"
-            defaultCountry="CA"
-          />
-        </div>
-        <button className="">Obtenir ma Soumission</button>
+        {validData(name, email, number, type, age, sex, smoke, money) ? (
+          <button className="qf-submit">Obtenir ma Soumission</button>
+        ) : null}
       </form>
     </div>
   );

@@ -63,7 +63,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-radius: 6px;
-  border: 1px solid #0c0961;
+  border: 1px solid #6986ce;
   height: 46px;
   width: fit-content;
 }
@@ -83,7 +83,7 @@
   text-align: center;
 }
 .qfr-radio:checked + .qfr-label {
-  background: #0c0961;
+  background: #6986ce;
   color: white;
 }
 .qfr-title {
@@ -106,4 +106,93 @@ input::-webkit-datetime-edit-month-field:focus,
 input::-webkit-datetime-edit-year-field:focus {
   background-color: #0c0961;
   outline: none;
+}
+
+.qf-bar {
+  display: flex;
+  border-radius: 6px;
+  border: 1px solid #6986ce;
+  width: fit-content;
+  padding: 2px;
+  align-self: center;
+}
+.qfb-button-active {
+  background: #6986ce;
+  height: 40px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-family: light;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+.qfb-button {
+  /* background: #6986ce; */
+  height: 40px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-family: light;
+  text-align: center;
+  cursor: pointer;
+}
+.qf-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20%;
+}
+.qf-button-active {
+  background: #6986ce;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-family: light;
+  border: none;
+  cursor: pointer;
+}
+.qf-button {
+  background: rgba(214, 214, 214, 0.726);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-family: light;
+  border: none;
+  cursor: not-allowed;
+}
+.qf-button > img {
+  height: 24px;
+}
+.qf-button-active > img {
+  height: 24px;
+}
+.qf-button-flip {
+  transform: rotate(180deg);
+}
+.qf-submit {
+  background: #6986ce;
+  color: white;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-family: light;
+  border: none;
+  cursor: pointer;
 }
