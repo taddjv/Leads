@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
+// import axios from "axios";
 import { validData } from "../../assets/helpers";
 import { Context } from "../../App";
 import Quote1 from "./Quote1";
@@ -9,6 +10,7 @@ import arrow from "../../assets/arrow.svg";
 
 const Quote = () => {
   const [step, setStep] = useState(1);
+  const navigate = useNavigate();
   const name = useContext(Context)[0];
   const setName = useContext(Context)[1];
   const email = useContext(Context)[2];
@@ -61,6 +63,7 @@ const Quote = () => {
       setSex("homme");
       setSmoke(true);
       setMoney("");
+      navigate("/");
     } catch (error) {
       console.error(error);
     }

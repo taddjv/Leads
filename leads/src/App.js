@@ -2,6 +2,7 @@ import React, { useState, createContext } from "react";
 import "./App.css";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
+import Body from "./components/Body";
 import QuotePage from "./components/QuotePage";
 import Quote from "./components/Quote";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -49,7 +50,8 @@ export default function App() {
                 <>
                   {" "}
                   <Navigation />
-                  <Home />{" "}
+                  <Home />
+                  <Body />
                 </>
               }
             ></Route>
@@ -118,7 +120,7 @@ export default function App() {
               }
             ></Route>
             <Route
-              path="/assurance-salaire"
+              path="/assurance-salaire/soumission"
               element={
                 <>
                   <Navigation />

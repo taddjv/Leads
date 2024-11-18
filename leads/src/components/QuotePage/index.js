@@ -13,7 +13,7 @@ const QuotePage = ({ name, picture }) => {
       <div className="quotepage-top">
         <div className="qpt-left">
           <div className="qptl-title">{name}</div>
-          <div className="hr-text">
+          <div className="qptl-text">
             "AssurÉlite est là pour vous aider à trouver et à acheter
             efficacement la bonne police d'assurance. Rassurez votre famille
             pour qu'elle puisse se concentrer sur une seule chose: vivre

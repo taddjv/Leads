@@ -55,5 +55,7 @@ mark {
   background-color: rgba(254, 239, 220, 0.5);
 }
 .App {
-  overflow: scroll;
+  /* overflow: scroll; */
+  overflow: auto;
+  height: 100vh;
 }

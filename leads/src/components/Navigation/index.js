@@ -7,7 +7,14 @@ import instagram from "../../assets/instagram.svg";
 function Navigation() {
   const [showing, setShowing] = useState(false);
   return (
-    <div className="navigation">
+    <div
+      className={
+        window.location.pathname.includes("soumission")
+          ? "navigation-s"
+          : "navigation"
+      }
+      //  className="navigation"
+    >
       <div className="navigation-left">
         <img className="nl-logo" src={logo} alt="logo" />
         <div className="nl-name">name</div>

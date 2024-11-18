@@ -7,6 +7,17 @@
   max-width: 1696px;
   margin: auto;
 }
+.navigation-s {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 48px;
+  background: white;
+  border-bottom: 1px solid rgba(47, 43, 61, 0.2);
+  max-width: 1696px;
+  margin: auto;
+}
 .navigation-left {
   display: flex;
   align-items: center;

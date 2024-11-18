@@ -17,15 +17,15 @@
 .qpt-left {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: start;
   gap: 20px;
 }
 .qptl-title {
   display: inline-block;
   font-family: title-regular;
   text-transform: capitalize;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: clamp(1em, 6.666vw, 3em);
+  line-height: 1em;
   background: #e5e8fd;
   width: min-content;
   padding: 12px;
@@ -33,6 +33,10 @@
 }
 .qptl-title {
   white-space: nowrap;
+}
+.qptl-text {
+  font-size: 1.3em;
+  font-family: regular;
 }
 .qpt-right {
   height: 100%;
@@ -42,7 +46,7 @@
 }
 .quotepage-bottom {
   background: #e5e8fd;
-  height: 200px;
+  height: 144px;
   width: 100vw;
   display: flex;
   align-items: center;
