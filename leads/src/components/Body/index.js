@@ -26,11 +26,13 @@ const Body = () => {
         grabCursor={true}
         className="mySwiper"
       >
-        <SwiperSlide>
+        <SwiperSlide style={{ background: "#0c0961" }}>
+          <NosServices />
+        </SwiperSlide>
+        <SwiperSlide style={{ background: "#f77162" }}>Slide 3</SwiperSlide>
+        <SwiperSlide style={{ background: "#6986ce" }}>
           <NousJoindre />
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
       </Swiper>
     </section>
   );

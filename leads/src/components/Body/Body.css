@@ -14,7 +14,7 @@
   color: #fff;
 }
 
-.swiper-slide:nth-child(1n) {
+/* .swiper-slide:nth-child(1n) {
   background-color: #6986ce;
 }
 
@@ -25,7 +25,7 @@
 
 .swiper-slide:nth-child(3n) {
   background-color: #f77162;
-}
+} */
 
 .nousjoindre {
   display: flex;
