@@ -11,7 +11,8 @@
   background: white;
 }
 .quote-form {
-  width: 460px;
+  /* width: 460px; */
+  width: clamp(35em, 6.666vw, 3em);
   padding: 1.5rem;
   border-radius: 6px;
   border: 1px solid rgba(47, 43, 61, 0.2);
@@ -58,6 +59,10 @@
 .qf-radio-container-flex {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
+}
+.qf-radio-container {
+  width: stretch;
 }
 .qf-radio {
   display: grid;
@@ -65,7 +70,7 @@
   border-radius: 6px;
   border: 1px solid #6986ce;
   height: 46px;
-  width: fit-content;
+  /* width: fit-content; */
 }
 .qfr-radio {
   display: none;
@@ -79,7 +84,7 @@
   border-radius: 6px;
   padding: 0 12px;
   line-height: 40.185px;
-  width: 80px;
+  /* width: 80px; */
   text-align: center;
 }
 .qfr-radio:checked + .qfr-label {
@@ -110,26 +115,15 @@ input::-webkit-datetime-edit-year-field:focus {
 
 .qf-bar {
   display: flex;
-  border-radius: 6px;
-  border: 1px solid #6986ce;
-  width: fit-content;
+  /* border-radius: 6px;
+  border: 1px solid #6986ce; */
+  width: stretch;
   padding: 2px;
   align-self: center;
-}
-.qfb-button-active {
-  background: #6986ce;
   height: 40px;
-  width: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  font-size: 0.9375rem;
-  font-family: light;
-  color: white;
-  text-align: center;
-  cursor: pointer;
+  background: rgba(214, 214, 214, 0.315);
 }
+
 .qfb-button {
   /* background: #6986ce; */
   height: 40px;
@@ -147,11 +141,12 @@ input::-webkit-datetime-edit-year-field:focus {
   display: flex;
   justify-content: space-between;
   padding: 0 20%;
+  margin-top: 12px;
 }
 .qf-button-active {
   background: #6986ce;
   height: 40px;
-  width: 40px;
+  width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,7 +159,7 @@ input::-webkit-datetime-edit-year-field:focus {
 .qf-button {
   background: rgba(214, 214, 214, 0.726);
   height: 40px;
-  width: 40px;
+  width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,4 +190,11 @@ input::-webkit-datetime-edit-year-field:focus {
   font-family: light;
   border: none;
   cursor: pointer;
+}
+.qf-notice {
+  font-family: light;
+  color: rgba(47, 43, 61, 0.68);
+  text-align: center;
+  font-size: 12px;
+  margin-top: 24px;
 }

@@ -26,6 +26,8 @@
   font-size: clamp(1em, 6.666vw, 3em);
   line-height: 1em;
   font-family: title;
+  backdrop-filter: blur(3px);
+  width: fit-content;
 }
 .home-title span {
   font-size: clamp(1em, 6.666vw, 3em);

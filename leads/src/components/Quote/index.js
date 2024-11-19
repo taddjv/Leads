@@ -75,24 +75,6 @@ const Quote = () => {
   return (
     <div className="quote">
       <form className="quote-form" onSubmit={handleSubmit}>
-        <div className="qf-bar">
-          <div
-            onClick={() => {
-              setStep(1);
-            }}
-            className={step === 1 ? "qfb-button-active" : "qfb-button"}
-          >
-            Étape 1
-          </div>
-          <div
-            onClick={() => {
-              setStep(2);
-            }}
-            className={step === 2 ? "qfb-button-active" : "qfb-button"}
-          >
-            Étape 2
-          </div>
-        </div>
         {step === 1 ? (
           <div className="qf-title">Votre Description</div>
         ) : (
@@ -109,6 +91,9 @@ const Quote = () => {
           >
             <img src={arrow} alt="arrow" />
           </div>
+          {/* <div className="qf-bar">
+            <div className="qf-bar-prog"></div>
+          </div> */}
           <div
             onClick={() => {
               setStep(2);
@@ -121,6 +106,9 @@ const Quote = () => {
         {validData(name, email, number, type, age, sex, smoke, money) ? (
           <button className="qf-submit">Obtenir ma Soumission</button>
         ) : null}
+        <div className="qf-notice">
+          Vos informations sont protégées et confidentielles.
+        </div>
       </form>
     </div>
   );

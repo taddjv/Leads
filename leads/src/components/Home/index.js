@@ -22,10 +22,8 @@ const Home = () => {
     <section className="home">
       <div className="home-container">
         <div className="home-title">
-          <mark>
-            Trouvez la <br />
-            meilleure Assurance
-          </mark>
+          Trouvez la <br />
+          meilleure Assurance
         </div>
         <div className="home-text">
           Access wholesale mortgage rates with down payments as low as 1%*
