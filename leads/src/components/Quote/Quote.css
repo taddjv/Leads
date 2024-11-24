@@ -21,6 +21,10 @@
   flex-direction: column;
   gap: 20px;
 }
+.qf-input {
+  display: flex;
+  flex-direction: column;
+}
 .qf-input > input,
 .qfd-input,
 .PhoneInputInput {

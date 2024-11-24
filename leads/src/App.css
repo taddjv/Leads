@@ -19,8 +19,12 @@
   src: url("./assets/Larken\ Serif\ Trial/LarkenDEMO-Black.otf");
 }
 @font-face {
-  font-family: title-regular;
+  font-family: title-medium;
   src: url("./assets/Larken\ Serif\ Trial/LarkenDEMO-Medium.otf");
+}
+@font-face {
+  font-family: title-regular;
+  src: url("./assets/Larken\ Serif\ Trial/LarkenDEMO-Regular.otf");
 }
 @font-face {
   font-family: catamaran;
@@ -48,7 +52,8 @@ u {
 body {
   width: 100vw;
   overflow: hidden;
-  background: #feefdc;
+  /* background: #feefdc; */
+  background: #fff9f1;
   /* background: white; */
 }
 mark {
