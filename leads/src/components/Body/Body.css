@@ -1,26 +1,31 @@
 .body {
-  width: calc(clamp(4.5em, 6.666vw, 6em) * 12.5);
+  width: var(--bodyWidth);
   padding: 0 2.6em;
   margin: auto;
 }
 .cards-box {
-  border: 1px solid black;
+  position: relative;
+  /* border: 1px solid black; */
 }
 .card {
   width: 100%;
   padding: calc(2.6em * 1.25);
+  border-radius: 2em;
 }
 .nousjoindre {
-  /* display: flex;
-  align-items: center; */
+  aspect-ratio: 16/6;
+  position: absolute;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 4fr 6fr;
+  gap: 6rem;
   background: #6986ce;
   padding: calc(2.6em * 1.25);
+  border-radius: 2em;
+  width: 90%;
+  /* left: ; */
 }
 .nj-left {
-  aspect-ratio: 1 / 1;
+  /* aspect-ratio: 1 / 1; */
   display: flex;
   align-items: center;
 }
@@ -31,24 +36,27 @@
   display: flex;
   flex-direction: column;
   width: stretch;
-  justify-content: center;
+  justify-content: start;
   gap: 1em;
 }
 .njr-title {
   font-family: title-regular;
   /* font-size: calc(clamp(4.5em, 6.666vw, 6em) * 0.5); */
   font-size: calc((5rem) * 0.5);
-  color: white;
+  /* color: white; */
+  color: #0c0654;
 }
 .njrm-title {
   font-family: title-regular;
   font-size: calc((2.5rem) * 0.5);
-  color: white;
+  /* color: white; */
+  color: #0c0654;
 }
 .njrm-desc {
   font-family: light;
   font-size: calc((1.75rem) * 0.5);
-  color: white;
+  /* color: white; */
+  color: #0c0654;
 }
 .njr-bullets {
   margin-block-start: 0em;
@@ -57,7 +65,8 @@
 .njr-bullet {
   font-size: 0.8em;
   font-family: light;
-  color: #fff;
+  /* color: #fff; */
+  color: #0c0654;
 }
 .njr-bullet:not(:last-child) {
   margin-bottom: 0.4rem;
@@ -93,14 +102,79 @@ textarea {
 textarea:focus {
   outline: none;
 }
+.nj-buttons {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  /* background: #cecece; */
+  margin: 2em auto;
+  border-radius: 500px;
+}
+.njb-midddle {
+  display: flex;
+}
+.njbm-title {
+  background: rgb(247, 113, 98);
+  font-family: title-regular;
+  font-size: calc((2.5rem) * 0.4);
+  color: #0c0654;
+  height: 100%;
+  padding: calc((2.5rem) * 0.475) 1em;
+  border-radius: 12px;
+}
+.nj-buttons > button {
+  height: 60px;
+  width: 60px;
+  padding: 6px;
+  border-radius: 100%;
+  border: none;
+  background: #0c0654;
+
+  cursor: pointer;
+}
+.njb-image {
+  height: 24px;
+}
+
+.position-1 {
+  z-index: 3;
+}
+.position-2 {
+  z-index: 2;
+  margin-left: 5%;
+  padding-right: calc(2.6em * 1.75);
+}
+.position-3 {
+  z-index: 1;
+  margin-left: 10%;
+  padding-right: calc(2.6em * 1.75);
+}
 
 @media (max-width: 1000px) {
   .body {
     padding: calc(1.6em);
     width: 100%;
   }
-  .cards-box {
-    border: 1px solid black;
-    /* width: 100%; */
+  .nousjoindre {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* display: grid;
+    grid-template-columns: 4fr 6fr; */
+    gap: 1em;
+    background: #6986ce;
+    /* padding: 2.6em 0.8em; */
+    border-radius: 2em;
+  }
+  .njr-title {
+    width: stretch;
+  }
+}
+@media (max-width: 479px) {
+  .nousjoindre {
+    padding: 2.6em 0.8em;
+  }
+  .njr-title {
+    width: stretch;
   }
 }

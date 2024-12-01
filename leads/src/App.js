@@ -20,6 +20,7 @@ export default function App() {
   const [sex, setSex] = useState("homme");
   const [smoke, setSmoke] = useState(false);
   const [money, setMoney] = useState("");
+  const [postiton, setPosition] = useState("1,2,3");
   return (
     <Context.Provider
       value={[
@@ -39,6 +40,8 @@ export default function App() {
         setSmoke,
         money,
         setMoney,
+        postiton,
+        setPosition,
       ]}
     >
       <div className="App">

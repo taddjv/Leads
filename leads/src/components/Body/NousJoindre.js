@@ -1,25 +1,34 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { Context } from "../../App";
-import letter from "../../assets/letter-cropped.svg";
+import letter from "../../assets/letter-cropped-svg.svg";
 
 const NousJoindre = () => {
   const email = useContext(Context)[2];
   const setEmail = useContext(Context)[3];
   let message;
   let setMessage;
+  const position = useContext(Context)[16];
 
   return (
-    <div className="nousjoindre" style={{ background: "#f77162" }}>
+    <div
+      className={`nousjoindre position-${position[4]}`}
+      style={{ background: "#bdb8fa" }}
+    >
+      {window.innerWidth < 1000 ? (
+        <div className="njr-title">Nous Joindre</div>
+      ) : null}
       <div className="nj-left">
         <img src={letter} alt="letter" />
       </div>
       <div className="nj-right">
-        <div className="njr-title">Nous Joindre</div>
+        {window.innerWidth > 1000 ? (
+          <div className="njr-title">Nous Joindre</div>
+        ) : null}
         <div className="njr-form">
           <div className="qf-input">
             <label
               style={{
-                color: "white",
+                color: "#0c0654",
               }}
             >
               Courriel
@@ -36,7 +45,7 @@ const NousJoindre = () => {
           <div className="qf-input stetch">
             <label
               style={{
-                color: "white",
+                color: "#0c0654",
               }}
             >
               Message
