@@ -1,10 +1,15 @@
 .body {
-  width: var(--bodyWidth);
+  width: 100%;
   padding: 0 2.6em;
   margin: auto;
 }
 .cards-box {
   position: relative;
+  aspect-ratio: 16 / 7;
+  max-width: calc(clamp(4.5em, 6.666vw, 6em) * 15);
+  margin: auto;
+
+  /* height: fit-content; */
   /* border: 1px solid black; */
 }
 .card {
@@ -13,7 +18,7 @@
   border-radius: 2em;
 }
 .nousjoindre {
-  aspect-ratio: 16/6;
+  aspect-ratio: 16/7;
   position: absolute;
   display: grid;
   grid-template-columns: 4fr 6fr;
@@ -149,7 +154,11 @@ textarea:focus {
   margin-left: 10%;
   padding-right: calc(2.6em * 1.75);
 }
-
+@media (max-width: 1140px) {
+  .nousjoindre {
+    aspect-ratio: 16/8;
+  }
+}
 @media (max-width: 1000px) {
   .body {
     padding: calc(1.6em);
@@ -159,20 +168,30 @@ textarea:focus {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* display: grid;
-    grid-template-columns: 4fr 6fr; */
     gap: 1em;
-    background: #6986ce;
-    /* padding: 2.6em 0.8em; */
-    border-radius: 2em;
+    aspect-ratio: auto;
+    height: var(--njheight);
   }
   .njr-title {
     width: stretch;
   }
 }
+@media (max-width: 767px) {
+  .cards-box {
+    max-width: calc(calc((100vw - (calc(0.8em * 2) * 2)) * 0.1) * 15);
+  }
+  .nousjoindre {
+    min-height: var(--njheight2);
+  }
+  .body {
+    padding: 0 0.8em;
+  }
+}
+
 @media (max-width: 479px) {
   .nousjoindre {
     padding: 2.6em 0.8em;
+    min-height: var(--njheight3);
   }
   .njr-title {
     width: stretch;

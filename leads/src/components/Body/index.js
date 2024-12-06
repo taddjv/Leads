@@ -16,6 +16,16 @@ const Body = () => {
   const position = useContext(Context)[16];
   const setPosition = useContext(Context)[17];
 
+  useEffect(() => {
+    const njWidth = document.querySelector(".nousjoindre").offsetWidth;
+    const width = document.querySelector(":root");
+    const height = 0.000635186 * Math.pow(njWidth, 2) - 0.145233 * njWidth;
+
+    width.style.setProperty("--njheight", `${height + 550}px`);
+    width.style.setProperty("--njheight2", `${height + 600}px`);
+    width.style.setProperty("--njheight3", `${height + 625}px`);
+  }, [window.innerWidth]);
+
   return (
     <section className="body">
       <div class="cards-box">
@@ -39,7 +49,7 @@ const Body = () => {
                 opacity: position[0] != 1 ? "0" : "1",
               }}
             >
-              Première Étape
+              {/* Étape 1 */}
             </div>
             <div
               className="njbm-title"
@@ -48,7 +58,7 @@ const Body = () => {
                 opacity: position[0] != 3 ? "0" : "1",
               }}
             >
-              Deuxième Étape
+              {/* Étape 2 */}
             </div>
             <div
               className="njbm-title"
@@ -57,7 +67,7 @@ const Body = () => {
                 opacity: position[0] != 2 ? "0" : "1",
               }}
             >
-              Troisième Étape
+              {/* Étape 3 */}
             </div>
           </div>
           <button

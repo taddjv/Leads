@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Body from "./components/Body";
 import QuotePage from "./components/QuotePage";
 import Quote from "./components/Quote";
+import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import avt from "./assets/AVT.svg";
 // import avp from "./assets/AVT.svg";
@@ -55,6 +56,7 @@ export default function App() {
                   <Navigation />
                   <Home />
                   <Body />
+                  <Footer />
                 </>
               }
             ></Route>

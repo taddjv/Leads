@@ -48,7 +48,7 @@ const NotreMission = () => {
             padding: "12px 18px",
           }}
         >
-          Soumission
+          Contacter
         </button>
       </div>
     </div>

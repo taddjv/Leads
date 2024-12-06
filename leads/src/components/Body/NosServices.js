@@ -36,14 +36,24 @@ const NosServices = () => {
             help clients find the best coverage.
           </div>
         </div>
-        <div className="njr-main">
+        <button
+          className="hr-button"
+          style={{
+            background: "#4A6EDB",
+            fontSize: "1rem",
+            padding: "12px 18px",
+          }}
+        >
+          Soumission
+        </button>
+        {/* <div className="njr-main">
           <div className="njrm-title">Ongoing Support and Consultation</div>
           <div className="njrm-desc">
             Our platform offers continuous support, with advisors available for
             follow-ups and consultations to adjust and optimize insurance plans
             as clients' needs evolve.
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
