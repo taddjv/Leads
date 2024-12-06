@@ -1,9 +1,14 @@
 import React, { useEffect, useContext, useRef, useState } from "react";
 import { Context } from "../../App";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
 import NosServices from "./NosServices";
 import NotreMission from "./NotreMission";
 import NousJoindre from "./NousJoindre";
+
 import left from "../../assets/left-svg.svg";
+import { useWindowSize } from "../../assets/helpers";
 
 import "./Body.css";
 import "swiper/css";
@@ -16,6 +21,8 @@ const Body = () => {
   const position = useContext(Context)[16];
   const setPosition = useContext(Context)[17];
 
+  const [width] = useWindowSize();
+
   useEffect(() => {
     const njWidth = document.querySelector(".nousjoindre").offsetWidth;
     const width = document.querySelector(":root");
@@ -24,11 +31,14 @@ const Body = () => {
     width.style.setProperty("--njheight", `${height + 550}px`);
     width.style.setProperty("--njheight2", `${height + 600}px`);
     width.style.setProperty("--njheight3", `${height + 625}px`);
-  }, [window.innerWidth]);
+  }, [width]);
 
   return (
     <section className="body">
       <div class="cards-box">
+      <NosServices />
+        <NotreMission />
+        <NousJoindre />
         <div className="nj-buttons">
           <button
             onClick={() => {
@@ -81,9 +91,6 @@ const Body = () => {
             <img className="njb-image" src={left} alt="right" />
           </button>
         </div>
-        <NosServices />
-        <NotreMission />
-        <NousJoindre />
       </div>
     </section>
   );

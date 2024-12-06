@@ -1,0 +1,14 @@
+.footer {
+    position: relative;
+background:#0c0961;
+color:azure
+}
+.footer-curve {
+    position: absolute;
+    width: 100%;
+    background: #fff9f1;
+    height: 10em;
+    /* border: 1px solid black; */
+    border-radius: 500px;
+    top:-5em
+}

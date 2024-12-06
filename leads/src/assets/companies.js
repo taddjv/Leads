@@ -17,6 +17,7 @@ const companies = [
   bnc,
   beneva,
   bmo,
+  rbc,
   cavie,
   ia,
   cibc,
@@ -25,7 +26,6 @@ const companies = [
   empire,
   humania,
   manulife,
-  rbc,
   sunlife,
   uv,
 ];

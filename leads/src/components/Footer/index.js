@@ -4,7 +4,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="footer-curve"></div>
+      {/* <div className="footer-curve"></div> */}
       <div className="footer-contact">
         <div className="fc-left">
           <button></button>

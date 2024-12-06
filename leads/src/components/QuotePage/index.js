@@ -1,7 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import blob1 from "../../assets/blob1.svg";
 import "./QuotePage.css";
 import "../Home/Home.css";
 import "swiper/css";

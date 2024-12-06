@@ -7,15 +7,15 @@
 }
 .home-background {
   position: absolute;
-  height: calc((100vh - 112px) * 0.9);
+  height: calc((100vh - 112px - 144px) * 0.9);
   right: 0;
-  bottom: 0;
+  bottom: 144px;
   z-index: -10;
 }
 .home-container {
   max-width: 1096px;
   width: calc(100vw * 0.75);
-  height: 100%;
+  height: calc(100% - 144px);
   margin: auto;
   padding: 72px 0;
   display: flex;
@@ -61,7 +61,7 @@
 .spin {
   position: absolute;
   height: fit-content;
-  bottom: 72px;
+  bottom: 144px;
 }
 .icon {
   position: absolute;
@@ -146,16 +146,21 @@ span {
   .spin {
     display: none;
   }
+  .mySwiper {
+    padding: calc(1.6em);
+  }
 }
 @media (max-width: 1000px) {
   .home {
     display: flex;
     flex-direction: column;
+    height: fit-content;
   }
   .home-background {
     position: relative;
     height: fit-content;
     width: 100%;
+    bottom:0
   }
   .home-container {
     width: 100%;
@@ -179,5 +184,8 @@ span {
   .icon {
     height: 100px;
     width: 100px;
+  }
+  .qpb-swiper {
+    padding: calc(1.6em);
   }
 }

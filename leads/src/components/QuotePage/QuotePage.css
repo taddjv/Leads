@@ -52,14 +52,34 @@
   align-items: center;
 }
 .qpb-swiper {
-  width: 1440px;
+  width: stretch;
+  height: 144px;
+  padding: 0;
 }
 .qpbs-slide {
+  position: relative;
+  height: 104px;
 }
 .qpbss-image {
-  max-height: 100px;
-  max-width: 200px;
+  height: stretch;
+  /* width: stretch; */
+  max-height: 60px;
+  max-width: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+
+  transform: translate(-50%, -50%); 
 }
 .swiper-wrapper {
   align-items: center;
+}
+.mySwiper {
+  max-width: calc(clamp(4.5em, 6.666vw, 6em) * 15);
+}
+
+@media (max-width: 1280px) {
+  .mySwiper {
+      padding: calc(1.6em);
+  }
 }
