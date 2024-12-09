@@ -18,15 +18,21 @@ const Home = () => {
   const [width] = useWindowSize();
 
   const num = (window) => {
-    let val = 7
-    if (window < 450) { return 2 } else
-    if (window < 600) { return 3 } else
-    if (window < 750) { return 4} else
-    if (window < 900) {  return 5 } else
-    if (window < 1050) {  return 6 } else
-  
-    return val;
-  }
+    let val = 6;
+    if (window < 450) {
+      return 2;
+    } else if (window < 600) {
+      return 3;
+    } else if (window < 750) {
+      return 4;
+    } else if (window < 1200) {
+      return 5;
+    }
+    // else if (window < 1050) {
+    //   return 6;
+    // }
+    else return val;
+  };
 
   useEffect(() => {
     const str = "Couvertures Sans Examen Medical";
@@ -84,24 +90,24 @@ const Home = () => {
       </div>
       <img src={background} alt="background" className="home-background" />
       <Swiper
-          slidesPerView={num(width)}
-          spaceBetween={30}
-          loop={true}
-          autoplay={{
-            delay: 1000,
-            disableOnInteraction: false,
-          }}
-          modules={[Autoplay]}
-          className="mySwiper qpb-swiper"
-        >
-          {companies.map((ele, i) => {
-            return (
-              <SwiperSlide className="qpbs-slide">
-                <img className="qpbss-image" src={ele} alt={i + ele} />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+        slidesPerView={num(width)}
+        spaceBetween={30}
+        loop={true}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
+        className="mySwiper qpb-swiper"
+      >
+        {companies.map((ele, i) => {
+          return (
+            <SwiperSlide className="qpbs-slide">
+              <img className="qpbss-image" src={ele} alt={i + ele} />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </section>
   );
 };

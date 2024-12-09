@@ -107,38 +107,44 @@ textarea:focus {
   outline: none;
 }
 .nj-buttons {
+  position: relative;
   display: flex;
   align-items: center;
+  height: 3em;
   width: fit-content;
-  /* background: #cecece; */
-  margin:0 auto;
+  background: #ebebeb;
+  margin: 0 auto;
   margin-top: 2em;
-  border-radius: 500px;
 }
 .njb-midddle {
   display: flex;
+  height: 100%;
 }
 .njbm-title {
-  background: rgb(247, 113, 98);
   font-family: title-regular;
   font-size: calc((2.5rem) * 0.4);
   color: #0c0654;
   height: 100%;
-  padding: calc((2.5rem) * 0.475) 1em;
-  border-radius: 12px;
+  padding: calc((2.5rem) * 0.4) 1em;
 }
 .nj-buttons > button {
-  height: 60px;
-  width: 60px;
-  padding: 6px;
+  /* height: 3em; */
+  /* width: 3em; */
+  height: 100%;
+  aspect-ratio: 1/1;
   border-radius: 100%;
   border: none;
   background: #0c0654;
-
   cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
 }
 .njb-image {
-  height: 24px;
+  width: 60%;
 }
 
 .position-1 {
@@ -147,14 +153,14 @@ textarea:focus {
 }
 .position-2 {
   position: absolute;
-  top:0;
+  top: 0;
   z-index: 2;
   margin-left: 5%;
   padding-right: calc(2.6em * 1.75);
 }
 .position-3 {
   position: absolute;
-  top:0;
+  top: 0;
   z-index: 1;
   margin-left: 10%;
   padding-right: calc(2.6em * 1.75);

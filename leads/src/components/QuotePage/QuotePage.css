@@ -67,19 +67,19 @@
   max-width: 120px;
   position: absolute;
   top: 50%;
-  left: 50%; 
+  left: 50%;
 
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
 }
 .swiper-wrapper {
   align-items: center;
 }
 .mySwiper {
-  max-width: calc(clamp(4.5em, 6.666vw, 6em) * 15);
+  max-width: calc(clamp(4.5em, 6.666vw, 6em) * 11);
 }
 
 @media (max-width: 1280px) {
   .mySwiper {
-      padding: calc(1.6em);
+    padding: calc(1.6em);
   }
 }

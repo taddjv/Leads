@@ -36,7 +36,7 @@ const Body = () => {
   return (
     <section className="body">
       <div class="cards-box">
-      <NosServices />
+        <NosServices />
         <NotreMission />
         <NousJoindre />
         <div className="nj-buttons">
@@ -47,8 +47,18 @@ const Body = () => {
               newPosition.push(number);
               setPosition(newPosition.join(","));
             }}
+            style={{
+              left: "-23px",
+            }}
           >
-            <img className="njb-image" src={left} alt="left" />
+            <img
+              className="njb-image"
+              src={left}
+              alt="left"
+              style={{
+                transform: "rotate(180deg)",
+              }}
+            />
           </button>
           <div className="njb-midddle">
             {" "}
@@ -57,27 +67,34 @@ const Body = () => {
               style={{
                 background: position[0] == 1 ? "#fbbdb6" : null,
                 opacity: position[0] != 1 ? "0" : "1",
+                borderTopRightRadius: "12px",
+                borderBottomRightRadius: "12px",
+                paddingLeft: "3em",
               }}
             >
-              {/* Étape 1 */}
+              Étape 1
             </div>
             <div
               className="njbm-title"
               style={{
                 background: position[0] == 3 ? "#c5d0ec" : null,
                 opacity: position[0] != 3 ? "0" : "1",
+                borderRadius: "12px",
               }}
             >
-              {/* Étape 2 */}
+              Étape 2
             </div>
             <div
               className="njbm-title"
               style={{
                 background: position[0] == 2 ? "#bdb8fa" : null,
                 opacity: position[0] != 2 ? "0" : "1",
+                borderTopLeftRadius: "12px",
+                borderBottomLeftRadius: "12px",
+                paddingRight: "3em",
               }}
             >
-              {/* Étape 3 */}
+              Étape 3
             </div>
           </div>
           <button
@@ -86,6 +103,9 @@ const Body = () => {
               const number = newPosition.pop();
               newPosition.unshift(number);
               setPosition(newPosition.join(","));
+            }}
+            style={{
+              right: "-23px",
             }}
           >
             <img className="njb-image" src={left} alt="right" />
