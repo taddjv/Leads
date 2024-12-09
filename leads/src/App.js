@@ -22,6 +22,7 @@ export default function App() {
   const [smoke, setSmoke] = useState(false);
   const [money, setMoney] = useState("");
   const [postiton, setPosition] = useState("1,2,3");
+  const [active,setActive] = useState(false)
   return (
     <Context.Provider
       value={[
@@ -43,6 +44,8 @@ export default function App() {
         setMoney,
         postiton,
         setPosition,
+        active,
+        setActive
       ]}
     >
       <div className="App">
