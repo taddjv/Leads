@@ -1,11 +1,22 @@
 .navigation {
-  position: relative;
+  position: fixed;
+  width: 100vw;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 48px;
   max-width: 1696px;
   margin: auto;
+  background: #fff9f1;
+}
+.navigation-d {
+  top: -113px;
+}
+.navigation-u {
+  height: 80px;
+  /* border-bottom: 1px solid rgb(232, 232, 232); */
+  background: white;
 }
 .navigation-s {
   position: relative;
@@ -25,7 +36,7 @@
 
 .nl-logo {
   height: 72px;
-  width: 72px;
+  /* width: 72px; */
 }
 .nl-name {
   font-family: logo;
@@ -102,7 +113,7 @@
   flex-direction: column;
   justify-content: space-between;
   color: #0c0961;
-  background: #feefdc;
+  background: #fff9f1;
   padding-bottom: calc(clamp(4em, 6.666vw, 3em) * 1.25);
   padding-top: calc(clamp(3em, 6.666vw, 3em) * 1.25);
 }

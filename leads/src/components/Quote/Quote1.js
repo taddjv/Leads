@@ -23,6 +23,18 @@ const Quote1 = () => {
   }, []);
   return (
     <>
+      {" "}
+      <div className="qf-type">
+        <div className="qfr-title">type d'assurance</div>
+        <select className="qfd-input">
+          {/* <option>Open this select menu</option> */}
+          <option selected="selected">Assurance Vie Permanente</option>
+          <option>Assurance Vie Temporaire</option>
+          <option>Assurance Hypothécaire</option>
+          <option>Assurance Maladie-Grave</option>
+          <option>Assurance Salaire</option>
+        </select>
+      </div>
       <div className="qf-radio-container-flex">
         <div className="qf-radio-container">
           <div className="qfr-title">Votre sexe</div>
@@ -53,7 +65,7 @@ const Quote1 = () => {
           </div>
         </div>
         <div className="qf-radio-container">
-          <div className="qfr-title">Etes vous fumeur</div>
+          <div className="qfr-title">Statut fumeur</div>
           <div className="qf-radio">
             <input
               className="qfr-radio"

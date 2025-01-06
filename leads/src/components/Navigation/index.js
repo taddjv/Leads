@@ -1,23 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../../App";
 import "./Navigation.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/newlogo.png";
 import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
 
 function Navigation() {
   const [showing, setShowing] = useState(false);
+  const position = useContext(Context)[16];
   return (
     <div
       className={
-        window.location.pathname.includes("soumission")
-          ? "navigation-s"
-          : "navigation"
+        position.split(",")[0] === "0"
+          ? window.location.href.endsWith("soumission")
+            ? "navigation navigation-u"
+            : "navigation"
+          : `navigation navigation-${position.split(",")[1]}`
       }
-      //  className="navigation"
     >
       <div className="navigation-left">
-        <img className="nl-logo" src={logo} alt="logo" />
-        <div className="nl-name">name</div>
+        {/* <img className="nl-logo" src={logo} alt="logo" /> */}
+        <div className="nl-name">genie</div>
       </div>
       <div className="navigation-right">
         {" "}

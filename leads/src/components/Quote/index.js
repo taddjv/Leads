@@ -5,7 +5,7 @@ import { validData } from "../../assets/helpers";
 import { Context } from "../../App";
 import Quote1 from "./Quote1";
 import Quote2 from "./Quote2";
-import "./Quote.css";
+import "./Quote copy.css";
 import arrow from "../../assets/arrow.svg";
 
 const Quote = () => {
@@ -74,12 +74,28 @@ const Quote = () => {
 
   return (
     <div className="quote">
+      <div className="quote-progress">
+        <div className="qp-set">
+          <div className={step === 1 ? "qps-t" : "qfr-title"}>Description</div>
+          <div
+            className="qps-bar"
+            style={{ background: step === 1 ? "#0c0961" : "#888b8c" }}
+          ></div>
+        </div>
+        <div className="qp-set">
+          <div className={step === 2 ? "qps-t" : "qfr-title"}>Coordonnées</div>
+          <div
+            className="qps-bar"
+            style={{ background: step === 2 ? "#0c0961" : "#888b8c" }}
+          ></div>
+        </div>
+      </div>
       <form className="quote-form" onSubmit={handleSubmit}>
-        {step === 1 ? (
+        {/* {step === 1 ? (
           <div className="qf-title">Votre Description</div>
         ) : (
           <div className="qf-title"> Vos Coordonnées</div>
-        )}
+        )} */}
 
         {step === 1 ? <Quote1 /> : <Quote2 />}
         <div className="qf-buttons">
@@ -100,6 +116,7 @@ const Quote = () => {
             }}
             className={step === 1 ? "qf-button-active" : "qf-button"}
           >
+            {/* Suivant */}
             <img className="qf-button-flip" src={arrow} alt="arrow" />
           </div>
         </div>

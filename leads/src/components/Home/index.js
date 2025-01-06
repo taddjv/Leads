@@ -1,4 +1,4 @@
-import React, { useEffect,useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { Context } from "../../App";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -8,7 +8,12 @@ import HomeDropDown from "./HomeDropdown";
 import icon from "../../assets/insurance.svg";
 import background from "../../assets/home-background-svg (1)-cropped.svg";
 import companies from "../../assets/companies";
-import { useWindowSize,spinner,numberSlider,activeScreenButton } from "../../assets/helpers";
+import {
+  useWindowSize,
+  spinner,
+  numberSlider,
+  activeScreenButton,
+} from "../../assets/helpers";
 
 import "./Home.css";
 import "swiper/css";
@@ -20,15 +25,13 @@ const Home = () => {
   const active = useContext(Context)[18];
   const setActive = useContext(Context)[19];
 
-
   useEffect(() => {
-    spinner()
+    spinner();
   }, []);
 
   return (
     <section className="home">
-      <div className= "home-container"
-      >
+      <div className="home-container">
         <div className="home-title">
           Trouvez la <br />
           meilleure Assurance
@@ -37,12 +40,22 @@ const Home = () => {
           Access wholesale mortgage rates with down payments as low as 1%*
         </div>
         <div
-          onMouseEnter={() => {setActive(true)}}
-          onMouseLeave={() => {setActive(false)}}
+          onMouseEnter={() => {
+            setActive(true);
+          }}
+          onMouseLeave={() => {
+            setActive(false);
+          }}
+          onClick={(e) => {
+            e.stopPropagation();
+            setActive(true);
+          }}
           className="hr-button-container"
         >
           <HomeDropDown />
-          <button className={activeScreenButton(active,width)}>Obtenir une Soumission</button>
+          <button className={activeScreenButton(active, width)}>
+            Obtenir une Soumission
+          </button>
         </div>
         <div className="spin">
           <img className="icon" src={icon} alt="icon" />

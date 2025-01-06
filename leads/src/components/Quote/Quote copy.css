@@ -2,23 +2,37 @@
 .PhoneInputCountrySelect {
   display: none;
 }
-
+/* #F2F5F8 */
 .quote {
-  /* height: calc(100vh - 112px); */
-  /* display: flex;
-  justify-content: center; */
   padding-top: 80px;
   background: white;
+  overflow: scroll;
 }
 .quote-progress {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  width: stretch;
+  padding: 0 1.5rem;
+  /* border: 1px solid black; */
+}
+.qps-t {
+  font-size: 0.9375rem;
+  font-family: regular;
+  text-transform: capitalize;
+  color: #0c0961;
+}
+.qps-bar {
+  height: 4px;
+  width: stretch;
+  /* background: #0c0961; */
+  border-radius: 500px;
+  margin-top: 4px;
 }
 .quote-form {
   /* width: 460px; */
   width: clamp(35em, 6.666vw, 3em);
   padding: 1.5rem;
-  border-radius: 6px;
-  border: 1px solid rgba(47, 43, 61, 0.2);
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -37,9 +51,10 @@
   font-family: light;
   color: rgba(47, 43, 61, 0.68);
   border-radius: 6px;
-  border: 1px solid rgba(47, 43, 61, 0.2);
+  border: none;
   padding: 0 12px;
   margin-top: 8px;
+  background: #f2f5f8;
 }
 .qf-input > input:focus,
 .qfd-input:focus,
@@ -50,8 +65,9 @@
 }
 .qf-input > label {
   font-size: 0.9375rem;
-  font-family: light;
-  text-transform: uppercase;
+  font-family: regular;
+  text-transform: capitalize;
+  color: #888b8c;
 }
 .qf-title {
   font-size: 20px;
@@ -75,34 +91,37 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-radius: 6px;
-  border: 1px solid #6986ce;
-  height: 46px;
+  /* border: 1px solid #6986ce; */
+  height: 40px;
   width: fit-content;
   margin-top: 8px;
+  background: #f2f5f8;
 }
 .qfr-radio {
   display: none;
 }
 .qfr-label {
+  height: 32px;
   font-size: 0.9375rem;
   font-family: light;
   color: rgba(47, 43, 61, 0.68);
   cursor: pointer;
-  margin: 0.125rem;
+  margin: 0.25rem;
   border-radius: 6px;
   padding: 0 12px;
-  line-height: 40.185px;
+  line-height: 32px;
   /* width: 80px; */
   text-align: center;
 }
 .qfr-radio:checked + .qfr-label {
-  background: #6986ce;
+  background: #0c0961;
   color: white;
 }
 .qfr-title {
   font-size: 0.9375rem;
-  font-family: light;
-  text-transform: uppercase;
+  font-family: regular;
+  text-transform: capitalize;
+  color: #888b8c;
 }
 .qfd-input {
   height: 40px;
@@ -111,7 +130,7 @@
   font-family: light;
   color: rgba(47, 43, 61, 0.68);
   border-radius: 6px;
-  border: 1px solid rgba(47, 43, 61, 0.2);
+  border: none;
   padding: 0 12px;
 }
 input::-webkit-datetime-edit-day-field:focus,
@@ -152,7 +171,7 @@ input::-webkit-datetime-edit-year-field:focus {
   margin-top: 12px;
 }
 .qf-button-active {
-  background: #6986ce;
+  background: #0c0961;
   height: 40px;
   width: 50px;
   display: flex;
@@ -209,7 +228,7 @@ input::-webkit-datetime-edit-year-field:focus {
 
 @media (max-width: 900px) {
   .quote {
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
     padding-top: 80px;
 
     background: white;
@@ -218,8 +237,6 @@ input::-webkit-datetime-edit-year-field:focus {
     /* width: 460px; */
     width: stretch;
     padding: 1.5rem;
-    border-radius: 6px;
-    border: 1px solid rgba(47, 43, 61, 0.2);
     height: fit-content;
     display: flex;
     flex-direction: column;

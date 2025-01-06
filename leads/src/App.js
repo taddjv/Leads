@@ -21,8 +21,17 @@ export default function App() {
   const [sex, setSex] = useState("homme");
   const [smoke, setSmoke] = useState(false);
   const [money, setMoney] = useState("");
-  const [postiton, setPosition] = useState("1,2,3");
-  const [active,setActive] = useState(false)
+  const [postiton, setPosition] = useState("0,-");
+  const [active, setActive] = useState(false);
+
+  const scrollEvent = (e) => {
+    const before = Number(postiton.split(",")[0]);
+    if (before < e.target.scrollTop) {
+      setPosition(`${e.target.scrollTop},d`);
+    } else {
+      setPosition(`${e.target.scrollTop},u`);
+    }
+  };
   return (
     <Context.Provider
       value={[
@@ -45,10 +54,10 @@ export default function App() {
         postiton,
         setPosition,
         active,
-        setActive
+        setActive,
       ]}
     >
-      <div className="App">
+      <div className="App" onScroll={scrollEvent}>
         <Router>
           <Routes>
             <Route
@@ -64,11 +73,11 @@ export default function App() {
               }
             ></Route>
             <Route
-              path="/assurance-vie-permanente"
+              path="/soumission"
               element={
                 <>
                   <Navigation />
-                  <QuotePage
+                  <Quote
                     name={
                       <>
                         <div>Assurance Vie</div> Parmanente

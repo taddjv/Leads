@@ -1,14 +1,16 @@
 .footer {
-    position: relative;
-background:#0c0961;
-color:azure
+  position: relative;
+  background: #0c0961;
+  color: azure;
+  padding-top: 48px;
 }
 .footer-curve {
-    position: absolute;
-    width: 100%;
-    background: #fff9f1;
-    height: 10em;
-    /* border: 1px solid black; */
-    border-radius: 500px;
-    top:-5em
+  position: absolute;
+  width: 100%;
+  background: #fff9f1;
+  height: 48px;
+  /* border: 1px solid black; */
+  border-bottom-left-radius: 3em;
+  border-bottom-right-radius: 3em;
+  top: 0;
 }
